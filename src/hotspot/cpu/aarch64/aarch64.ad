@@ -2714,7 +2714,7 @@ encode %{
   enc_class aarch64_enc_ldrshw(iRegI dst, memory mem) %{
     Register dst_reg = as_Register($dst$$reg);
     loadStore(MacroAssembler(&cbuf), &MacroAssembler::ldrshw, dst_reg, $mem->opcode(),
-               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp);
+               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp, 2);
   %}
 
   // This encoding class is generated automatically from ad_encode.m4.
@@ -2722,7 +2722,7 @@ encode %{
   enc_class aarch64_enc_ldrsh(iRegI dst, memory mem) %{
     Register dst_reg = as_Register($dst$$reg);
     loadStore(MacroAssembler(&cbuf), &MacroAssembler::ldrsh, dst_reg, $mem->opcode(),
-               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp);
+               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp, 2);
   %}
 
   // This encoding class is generated automatically from ad_encode.m4.
@@ -2730,7 +2730,7 @@ encode %{
   enc_class aarch64_enc_ldrh(iRegI dst, memory mem) %{
     Register dst_reg = as_Register($dst$$reg);
     loadStore(MacroAssembler(&cbuf), &MacroAssembler::ldrh, dst_reg, $mem->opcode(),
-               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp);
+               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp, 2);
   %}
 
   // This encoding class is generated automatically from ad_encode.m4.
@@ -2738,7 +2738,7 @@ encode %{
   enc_class aarch64_enc_ldrh(iRegL dst, memory mem) %{
     Register dst_reg = as_Register($dst$$reg);
     loadStore(MacroAssembler(&cbuf), &MacroAssembler::ldrh, dst_reg, $mem->opcode(),
-               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp);
+               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp, 2);
   %}
 
   // This encoding class is generated automatically from ad_encode.m4.
@@ -2746,7 +2746,7 @@ encode %{
   enc_class aarch64_enc_ldrw(iRegI dst, memory mem) %{
     Register dst_reg = as_Register($dst$$reg);
     loadStore(MacroAssembler(&cbuf), &MacroAssembler::ldrw, dst_reg, $mem->opcode(),
-               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp);
+               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp, 4);
   %}
 
   // This encoding class is generated automatically from ad_encode.m4.
@@ -2754,7 +2754,7 @@ encode %{
   enc_class aarch64_enc_ldrw(iRegL dst, memory mem) %{
     Register dst_reg = as_Register($dst$$reg);
     loadStore(MacroAssembler(&cbuf), &MacroAssembler::ldrw, dst_reg, $mem->opcode(),
-               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp);
+               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp, 4);
   %}
 
   // This encoding class is generated automatically from ad_encode.m4.
@@ -2762,7 +2762,7 @@ encode %{
   enc_class aarch64_enc_ldrsw(iRegL dst, memory mem) %{
     Register dst_reg = as_Register($dst$$reg);
     loadStore(MacroAssembler(&cbuf), &MacroAssembler::ldrsw, dst_reg, $mem->opcode(),
-               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp);
+               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp, 4);
   %}
 
   // This encoding class is generated automatically from ad_encode.m4.
@@ -2770,7 +2770,7 @@ encode %{
   enc_class aarch64_enc_ldr(iRegL dst, memory mem) %{
     Register dst_reg = as_Register($dst$$reg);
     loadStore(MacroAssembler(&cbuf), &MacroAssembler::ldr, dst_reg, $mem->opcode(),
-               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp);
+               as_Register($mem$$base), $mem$$index, $mem$$scale, $mem$$disp, 8);
   %}
 
   // This encoding class is generated automatically from ad_encode.m4.
